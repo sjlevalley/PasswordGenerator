@@ -15,11 +15,6 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 
 
-1. Create a page that says "Password Generator" at the top middle
-2. Create a box that has "Generate a Password" as a Heading 
-3. Create a box that initially says "Your Secure Password"
-4. Have a button that says Generate Password
-
 Variables - 
     - 
 
