@@ -4,10 +4,15 @@ var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
                 "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 var uppercase = String.prototype.toUpperCase.apply(lowercase).split(",");
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-var characters = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", 
+var special = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", 
                     "=", "+", "[", "]", "{", "}", "|", ";", ":", "'", "<", ",", ".", ">",
                     "/", "?"]
 
+
+var userArray = []
+
+
+//create an array for the password and loop through it for as long as password.length < lengthchosen
 
 
 
@@ -38,19 +43,45 @@ function generatePassword() {
             window.alert("You must select at least one category!");
             generatePassword();
         }
-        
 
     } else if (pwLength !== null) {
         window.alert("You must enter a number between 8 and 128");
         generatePassword();
+
     } else {
         return;
     };
 
-    if (confirmNumbers === null) {
-        window.alert("Hello!");
-    }
     
+
+    if (confirmLowercase === true) {
+        userArray = userArray.concat(lowercase);
+    };
+    
+    if (confirmUppercase === true) {
+        userArray = userArray.concat(uppercase);
+    };
+
+    if (confirmNumbers === true) {
+        userArray = userArray.concat(numbers);
+    };
+
+    if (confirmSpecial === true) {
+        userArray = userArray.concat(special);
+    };
+
+
+
+    window.alert(userArray);
+
+
+
+
+
+ 
+
+    
+
     
 
 

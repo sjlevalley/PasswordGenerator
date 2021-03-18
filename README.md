@@ -19,6 +19,8 @@ Variables -
     - 
 
 5. When the button is clicked on, the user is prompted how many characters they would like the password to be.
+
+
 6. If the user input is not a number, or less than 8, or greater than 128, tell the user that it must be a number between 8 and 128.
 6. Reprompt user to input a number between 8 and 128.
 7. If the user inputs a number between 8 and 128, 
