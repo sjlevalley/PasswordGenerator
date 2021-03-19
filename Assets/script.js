@@ -1,3 +1,6 @@
+
+
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "o", 
@@ -10,26 +13,24 @@ var special = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", 
                     "/", "?"]
 var userArray = [];
 var UserPW = [];
-// var pwLength = prompt("How many characters would you like your password to be?");
 
-
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-   
-
-  passwordText.value = password; 
-}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+function writePassword() {
+      var password = generatePassword();
+      var passwordText = document.querySelector("#password");
+       
+    
+      passwordText.value = password; 
+    }
 
 function generatePassword() {
     
     
     var pwLength = prompt("How many characters would you like your password to be?");
+    var UserPW = [];
 
     if (pwLength >= 8 && pwLength <= 128) {
         var confirmLowercase = confirm("Click OK to confirm including LOWERCASE letters");
@@ -70,20 +71,15 @@ function generatePassword() {
     console.log(userArray);
     window.alert(pwLength);
 
-
-// var userArray = [];
-// var UserPW = [];
+    
 
     for (i=0; i < pwLength; i++) {
         UserPW[i] = userArray[Math.floor(Math.random()* userArray.length)];
     }    
     console.log(UserPW);
+    return UserPW.join('');
 }
 
-// for (i=0; i < pwLength; i++) {
-//     UserPW[i] = userArray[Math.floor(Math.random()* userArray.length)];
-// }    
-// console.log(UserPW);
 
  
 
