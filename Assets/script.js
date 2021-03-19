@@ -9,7 +9,11 @@ var special = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", 
                     "/", "?"]
 
 
-var userArray = []
+var userArray = [];
+
+ {
+
+ }
 
 
 //create an array for the password and loop through it for as long as password.length < lengthchosen
@@ -70,34 +74,18 @@ function generatePassword() {
         userArray = userArray.concat(special);
     };
 
-
-
     window.alert(userArray);
+    window.alert(pwLength);
 
 
 
+    PWArray = [];
+
+    for (i = 0; i < pwLength; i++) {
+        PWArray[i] = userArray[Math.floor(Math.random() * pwLength)];
+    };
+    PWArray = PWArray.join('');
+    window.alert(PWArray);
+}
 
 
- 
-
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-};
