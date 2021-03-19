@@ -8,18 +8,9 @@ var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 var special = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", 
                     "=", "+", "[", "]", "{", "}", "|", ";", ":", "'", "<", ",", ".", ">",
                     "/", "?"]
-
-var PWArray = [];
-
-
- {
-
- }
-
-
-//create an array for the password and loop through it for as long as password.length < lengthchosen
-
-
+var userArray = [];
+var UserPW = [];
+// var pwLength = prompt("How many characters would you like your password to be?");
 
 
 
@@ -29,16 +20,14 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
    
 
-//   passwordText.value = password;
-  passwordText.value = password;
- 
+  passwordText.value = password; 
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
-    var userArray = [];
+    
     
     var pwLength = prompt("How many characters would you like your password to be?");
 
@@ -81,19 +70,23 @@ function generatePassword() {
     console.log(userArray);
     window.alert(pwLength);
 
-    // var userArrayRandom = userArray[Math.floor(Math.random()* userArray.length)];
-    // console.log(userArrayRandom);
 
-    var UserPW = [];
+// var userArray = [];
+// var UserPW = [];
 
     for (i=0; i < pwLength; i++) {
         UserPW[i] = userArray[Math.floor(Math.random()* userArray.length)];
-    }
-
-    
+    }    
+    console.log(UserPW);
 }
 
-    
+// for (i=0; i < pwLength; i++) {
+//     UserPW[i] = userArray[Math.floor(Math.random()* userArray.length)];
+// }    
+// console.log(UserPW);
+
+ 
+
 
 
 
