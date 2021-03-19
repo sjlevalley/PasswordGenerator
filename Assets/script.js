@@ -44,12 +44,14 @@ function generatePassword() {
         var confirmSpecial = confirm("Click OK to confirm including SPECIAL CHARACTERS");
         if (!confirmLowercase && !confirmUppercase && !confirmNumbers && !confirmSpecial) {
             window.alert("You must select at least one category!");
-            generatePassword();
+            return;
         }
 
     } else if (pwLength !== null) {
         window.alert("You must enter a number between 8 and 128");
-        generatePassword();
+        return;
+        writePassword();
+        
 
     } else {
         return;
