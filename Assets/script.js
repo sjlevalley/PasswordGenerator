@@ -67,25 +67,21 @@ function generatePassword() {
     if (confirmLowercase === true) {
         userArray = userArray.concat(lowercase);
         UserPW.push(lowercase[lowerrandomIndex]);
-        console.log(UserPW);
     };
     
     if (confirmUppercase === true) {
         userArray = userArray.concat(uppercase);
-        UserPW.push(uppercase[upperrandomIndex]);
-        console.log(UserPW);
+        UserPW.push(uppercase[upperrandomIndex]); 
     };
 
     if (confirmNumbers === true) {
         userArray = userArray.concat(numbers);
         UserPW.push(numbers[numberrandomIndex]);
-        console.log(UserPW);
     };
 
     if (confirmSpecial === true) {
         userArray = userArray.concat(special);
         UserPW.push(special[specialrandomIndex]);
-        console.log(UserPW);
     };
 
 
