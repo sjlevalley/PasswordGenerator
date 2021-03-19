@@ -2,14 +2,15 @@
 var generateBtn = document.querySelector("#generate");
 var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "o", 
                 "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-var uppercase = String.prototype.toUpperCase.apply(lowercase).split(",");
+var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", 
+                    "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 var special = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", 
                     "=", "+", "[", "]", "{", "}", "|", ";", ":", "'", "<", ",", ".", ">",
                     "/", "?"]
 
+var PWArray = [];
 
-var userArray = [];
 
  {
 
@@ -28,6 +29,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
    
 
+//   passwordText.value = password;
   passwordText.value = password;
  
 }
@@ -36,6 +38,8 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
+    var userArray = [];
+    
     var pwLength = prompt("How many characters would you like your password to be?");
 
     if (pwLength >= 8 && pwLength <= 128) {
@@ -74,18 +78,26 @@ function generatePassword() {
         userArray = userArray.concat(special);
     };
 
-    window.alert(userArray);
+    console.log(userArray);
     window.alert(pwLength);
 
+    // var userArrayRandom = userArray[Math.floor(Math.random()* userArray.length)];
+    // console.log(userArrayRandom);
 
+    var UserPW = [];
 
-    PWArray = [];
+    for (i=0; i < pwLength; i++) {
+        UserPW[i] = userArray[Math.floor(Math.random()* userArray.length)];
+    }
 
-    for (i = 0; i < pwLength; i++) {
-        PWArray[i] = userArray[Math.floor(Math.random() * pwLength)];
-    };
-    PWArray = PWArray.join('');
-    window.alert(PWArray);
+    
 }
+
+    
+
+
+
+
+
 
 
