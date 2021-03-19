@@ -68,15 +68,12 @@ function generatePassword() {
         userArray = userArray.concat(special);
     };
 
-    console.log(userArray);
-    window.alert(pwLength);
 
     
 
     for (i=0; i < pwLength; i++) {
         UserPW[i] = userArray[Math.floor(Math.random()* userArray.length)];
     }    
-    console.log(UserPW);
     return UserPW.join('');
 }
 
