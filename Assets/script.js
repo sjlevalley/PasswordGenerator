@@ -50,7 +50,6 @@ function generatePassword() {
     } else if (pwLength !== null) {
         window.alert("You must enter a number between 8 and 128");
         return;
-        writePassword();
         
 
     } else {
