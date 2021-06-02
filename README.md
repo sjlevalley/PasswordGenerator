@@ -1,8 +1,15 @@
 # RandomPasswordGenerator
 
+![](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+# App Screenshot
+
 ![App Screenshot](pwGenerator.png "Description")
 
-The purpose of this project is to create a random password generator that generates a password based on user-selected criteria.
+# Description
+
+Tired of getting told your password is weak? There's a solution for that. When you use this password generator, you can create a randomly
+generated password of your desired length and choose which types of characters to include. This app uses JavaScript, CSS, and HTML to generate a random password for you.
 
 The URL for this website is: https://sjlevalley.github.io/PasswordGenerator/
 
