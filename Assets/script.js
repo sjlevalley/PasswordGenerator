@@ -35,7 +35,7 @@ function generatePassword() {
     
     // Initial prompt for user to select password length, requiring them to choose a password between 8 - 128 characters
     var pwLength = prompt("How many characters would you like your password to be?");
-    var UserPW = [];
+    // var UserPW = [];
 
     if (pwLength >= 8 && pwLength <= 128) {
         var confirmLowercase = confirm("Click OK to confirm including LOWERCASE letters");
@@ -65,6 +65,8 @@ function generatePassword() {
 
     // If "true", random item from that array is added to user password and concatinating the arrays of 
     // each type of character the user chose into one larger array called "userArray"
+    var UserPW = [];
+
     if (confirmLowercase === true) {
         userArray = userArray.concat(lowercase);
         UserPW.push(lowercase[lowerrandomIndex]);

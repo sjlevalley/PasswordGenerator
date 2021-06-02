@@ -1,5 +1,7 @@
 # RandomPasswordGenerator
 
+![App Screenshot](pwGenerator.png "Description")
+
 The purpose of this project is to create a random password generator that generates a password based on user-selected criteria.
 
 The URL for this website is: https://sjlevalley.github.io/PasswordGenerator/
